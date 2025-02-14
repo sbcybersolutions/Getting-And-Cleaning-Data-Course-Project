@@ -9,3 +9,6 @@ The data set being used is the <a href="https://d396qusza40orc.cloudfront.net/ge
 <code>run_analysis.R</code>: Contains the code to perform all the functions required for Project Submission.
 
 <code>FinalData.txt</code>: The final, tidy dataset required for completion of the project.
+
+#Project Assumptions
+The code takes for granted that all of the data is present in the same folder, un-compressed, and without any names altered.
