@@ -45,3 +45,16 @@ Once the dataset was downloaded each of the following files were read into separ
 Then the datasets were merged.  <b>rbind</b> was used to merge the X, Y, and Subject test & train data sets. Then <b>cbind</b> was used to merge all three into a single dataset called <b>Merged_Data</b>.
 
 From there, the Mean and Standard Deviation was extracted for each measurement selecting only columns <code>subject</code> and <code>code</code> and creating a new dataframe called <code>TidyData</code> that contained the <b>Mean</b> and <b>Standard Deviation</b> for each measurement.
+
+Data was then labled with descriptive names:
+<ul>
+  <li>Code was renamed to activities</li>
+  <li>Acc -> Accelerometer</li>
+  <li>Gyro -> Gyroscope</li>
+  <li>BodyBody -> Body</li>
+  <li>Mag -> Magnitude</li>
+  <li>f -> Frequency</li>
+  <li>t -> time</li>
+</ul>
+
+Finally, the new tidy data set <code>FinalData</code> was created by grouping <b>subject</b> and <b>activity</b>, and providing the <b>mean</b> and <b>standard deviation</b> for each entry.
