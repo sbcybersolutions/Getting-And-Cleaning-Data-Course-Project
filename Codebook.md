@@ -12,9 +12,9 @@ You will be graded by your peers on a series of yes/no questions related to the 
 
 You will be required to submit: 
 <ol>
-  <li>a tidy data set as described below</li>
-  <li>a link to a Github repository with your script for performing the analysis</li>
-  <li>a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md.</li>
+  <li>A tidy data set as described below</li>
+  <li>A link to a Github repository with your script for performing the analysis</li>
+  <li>A code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md.</li>
 </ol>
 
 You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
@@ -28,3 +28,17 @@ The student should create one R script called <code>run_analysis.R</code> that d
   <li>Appropriately labels the data set with descriptive variable names.</li>
   <li>From the data set in Step 4, create a second, independent tidy data set with the average for each activity and each subject.</li>
 </ul>
+
+## Methodology
+After downloading the dataset, all of the data frames were assigned.
+
+<code>
+features <- read.table("UCI HAR Dataset/features.txt", col.names = c("n","functions"))
+activities <- read.table("UCI HAR Dataset/activity_labels.txt", col.names = c("code", "activity"))
+subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt", col.names = "subject")
+x_test <- read.table("UCI HAR Dataset/test/X_test.txt", col.names = features$functions)
+y_test <- read.table("UCI HAR Dataset/test/y_test.txt", col.names = "code")
+subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt", col.names = "subject")
+x_train <- read.table("UCI HAR Dataset/train/X_train.txt", col.names = features$functions)
+y_train <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "code")
+</code>
