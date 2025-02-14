@@ -18,3 +18,13 @@ You will be required to submit:
 </ol>
 
 You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
+
+## Student Requirements
+The student should create one R script called <code>run_analysis.R</code> that does the following:
+<ul>
+  <li>Merges the training and test datasets to create a single data set.</li>
+  <li>Extract only the measurements on the mean and standard deviation for each measurement.</li>
+  <li>Use appropriate descriptive activity names to name the activities in the dataset.</li>
+  <li>Appropriately labels the data set with descriptive variable names.</li>
+  <li>From the data set in Step 4, create a second, independent tidy data set with the average for each activity and each subject.</li>
+</ul>
