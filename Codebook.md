@@ -30,15 +30,18 @@ The student should create one R script called <code>run_analysis.R</code> that d
 </ul>
 
 ## Methodology
-After downloading the dataset, all of the data frames were assigned.
+Once the dataset was downloaded each of the following files were read into separate dataframes:
+<ul>
+  <li><code>features.txt</code></li>
+  <li><code>activity_labels.txt</code></li>
+  <li><code>subject_test</code></li>
+  <li><code>x_test.txt</code></li>
+  <li><code>y_test</code></li>
+  <li><code>subject_train</code></li>
+  <li><code>x_train</code></li>
+  <li><code>y_train</code></li>
+</ul>
 
-<code>
-features <- read.table("UCI HAR Dataset/features.txt", col.names = c("n","functions"))
-activities <- read.table("UCI HAR Dataset/activity_labels.txt", col.names = c("code", "activity"))
-subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt", col.names = "subject")
-x_test <- read.table("UCI HAR Dataset/test/X_test.txt", col.names = features$functions)
-y_test <- read.table("UCI HAR Dataset/test/y_test.txt", col.names = "code")
-subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt", col.names = "subject")
-x_train <- read.table("UCI HAR Dataset/train/X_train.txt", col.names = features$functions)
-y_train <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "code")
-</code>
+Then the datasets were merged.  <b>rbind</b> was used to merge the X, Y, and Subject test & train data sets. Then <b>cbind</b> was used to merge all three into a single dataset called <b>Merged_Data</b>.
+
+From there, the Mean and Standard Deviation was extracted for each measurement selecting only columns <code>subject</code> and <code>code</code> and creating a new dataframe called <code>TidyData</code> that contained the <b>Mean</b> and <b>Standard Deviation</b> for each measurement.
