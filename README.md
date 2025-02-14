@@ -5,5 +5,7 @@ The data set being used is the <a href="https://d396qusza40orc.cloudfront.net/ge
 
 # Files In This Repository
 <code>Codebook.md</code>: A Code book that describes the variables, the data, and any transformations or work that was performed to clean the data.
+
 <code>run_analysis.R</code>: Contains the code to perform all the functions required for Project Submission.
+
 <code>FinalData.txt</code>: The final, tidy dataset required for completion of the project.
