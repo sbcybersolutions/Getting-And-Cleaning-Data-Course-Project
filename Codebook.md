@@ -58,3 +58,5 @@ Data was then labled with descriptive names:
 </ul>
 
 Finally, the new tidy data set <code>FinalData</code> was created by grouping <b>subject</b> and <b>activity</b>, and providing the <b>mean</b> and <b>standard deviation</b> for each entry.
+
+<code>FinalData.txt</code> is the tidy data output file.
